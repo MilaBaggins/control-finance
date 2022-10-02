@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+    <link rel="stylesheet" href="./styles/globalStyles.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/desktop.css">
+    <link rel="stylesheet" href="./pages/home/index.css">
+</head>
+
+<body>
+    <nav class="nav-menu" id="nav">
+        <section class="menu-flex container ">
+            <img src="./assets/logo_menu.svg" class="menu-img" id="menu-img-id"
+                alt="Logo da página escrito: Control finance">
+            <button class="button-menu" id="button-register-menu" type="submit">Registrar novo valor</button>
+        </section>
+    </nav>
+
+    <main id="app">
+        <section class="filter-summary-finances container">
+            <h3 class="h3-title-filter" id="h3-filter">Resumo financeiro</h3>
+            <div class="buttons-filter">
+                <button class="button-filter-all" id="all" type="submit">Todos</button>
+                <button class="filter-button-defalt" id="dataInput" type="submit">Entrada</button>
+                <button class="filter-button-defalt" id="dataOutput" type="submit">Saída</button>
+            </div>
+
+        </section>
+
+        <section class="value-sum container" id="sum-container-id">
+        </section>
+
+        <section id="cards-section">
+        </section>
+
+    </main>
+
+    <section class="section-modal" id="modal">
+    </section>
+
+        
+    
+    
+    <script src="./pages/home/valuesData.js"></script>
+    <script src="./scripts/cards.js"></script>
+    <script src="./pages/home/index.js"></script>
+    <script src="./scripts/modal.js"></script>
+    
+</body>
+
+</html>

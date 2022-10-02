@@ -1,0 +1,82 @@
+@media(min-width: 768px) {
+
+    .menu-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+   
+    .menu-img {
+        width: 153px;
+        height: 24px;
+        padding-bottom: 6px;
+    }
+
+    #button-register-menu {
+        color: var(--fixed-white);
+        padding: 0px 0px;
+        max-width: 200px;
+        margin-bottom: 0px;
+    }
+
+    .h3-title-filter{
+        padding-bottom: 10px;
+    }
+
+    .filter-summary-finances{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .buttons-filter{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .img-background-black-modal {
+        opacity: 40%;
+        width: 100vw;
+        height: 120vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    .modal-section {
+        background-color: var(--fixed-white);
+        border-radius: 6px;
+        padding: 20px;
+        position: absolute;
+        top: 150px;
+        left: 490px;
+        max-width: 400px;
+    }
+
+    .value-type-div {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+        height: 35px;
+    }
+
+    .buttons-value-div {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    }
+
+    .defalt-modal-button {
+        max-width: 120px;
+    }
+
+    .cancel-insertValue {
+        justify-content: flex-end;
+    }
+}

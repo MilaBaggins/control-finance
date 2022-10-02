@@ -1,1 +1,90 @@
-/* Desenvolva a estilização da sua página aqui */
+.nav-menu {
+    background-color: var(--color-grey-4);
+}
+
+.menu-img {
+    width: 153px;
+    height: 24px;
+    margin-top: 28px;
+    margin-bottom: 15px;
+}
+
+@media(max-width: 769px) {
+    .menu-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .filter-summary-finances {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        height: 100px;
+    }
+
+    .buttons-filter {
+        width: 100%;
+        display: flex;
+        gap: 14px;
+    }
+}
+
+.h3-title-filter {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.value-sum {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-grey-4);
+    padding: 14px 10px;
+    border: 1.5px solid #E9ECEF;
+    border-radius: 8px;
+    font-weight: var(--font-weight-2);
+}
+
+.main-data-div{
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1.5px solid var(--color-grey-4);
+    border-radius: 8px;
+    padding: 7px 10px;
+}
+
+.data-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-data-div p{
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+}
+
+.input-li{
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 7px 14px;
+    background-color: var(--color-grey-4);
+    color: var(--color-grey-2);
+}
+
+.trash-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    border: 1.5px solid var(--color-grey-4);
+    border-radius: 5px;
+}

@@ -1,9 +1,3 @@
-/* function createModal(){
-    const body = document.querySelector("body")
-
-    const
-}
-createModal() */
 
 function createModal() {
     const body = document.querySelector("body")
@@ -128,11 +122,25 @@ function insertValueTyped() {
     const getClickInput = document.getElementById("input-modal-id")
     getClickInput.addEventListener('click', () => {
         categoryId = 1
+        getClickInput.style.border = "1.5px solid var(--color-brand-1)"
+        getClickInput.style.backgroundColor = "var(--color-brand-3)"
+        getClickInput.style.color = "var(--color-brand-1)"
+
+        getClickOutput.style.border = "1.5px solid var(--color-grey-3)"
+        getClickOutput.style.backgroundColor = "var(--fixed-white)"
+        getClickOutput.style.color = "var(--color-grey-2)"
     })
 
     const getClickOutput = document.getElementById("output-modal-id")
     getClickOutput.addEventListener('click', () => {
         categoryId = 2
+        getClickOutput.style.border = "1.5px solid var(--color-brand-1)"
+        getClickOutput.style.backgroundColor = "var(--color-brand-3)"
+        getClickOutput.style.color = "var(--color-brand-1)"
+
+        getClickInput.style.border = "1.5px solid var(--color-grey-3)"
+        getClickInput.style.backgroundColor = "var(--fixed-white)"
+        getClickInput.style.color = "var(--color-grey-2)"
     })
 
     insertValueButtonEvent.addEventListener('click', () => {
@@ -148,4 +156,6 @@ function insertValueTyped() {
         modalSectionRemove.remove()
     })
 }
+
+
 

@@ -68,6 +68,7 @@ const creatCards = (arrValues) => {
         creatCard(value)
     });
     value()
+
 }
 creatCards(insertedValues)
 
@@ -78,7 +79,7 @@ function value() {
     let sum = insertedValues.reduce((acumulador, item) => {
         let result = 0
         if (item.categoryID === 1) {
-           result =  acumulador + item.value
+            result = acumulador + item.value
         } else {
             result = acumulador - item.value
         }
@@ -102,3 +103,73 @@ function value() {
     return valueSumContainer
 }
 
+
+function filterInput(item) {
+
+    return item.categoryID === 1
+}
+
+function filterOutput(item) {
+
+    return item.categoryID === 2
+}
+
+function filterAll(item) {
+    return categoryID
+}
+
+
+function filterButtonsEvent() {
+    const buttonAllEvent = document.getElementById("all")
+    const buttonInputEvent = document.getElementById("dataInput")
+    const buttonOutputEvent = document.getElementById("dataOutput")
+
+    buttonAllEvent.addEventListener("click", () => {
+        creatCards(insertedValues)
+        buttonAllEvent.style.border = "1.5px solid var(--color-brand-1)"
+        buttonAllEvent.style.backgroundColor = "var(--color-brand-3)"
+        buttonAllEvent.style.color = "var(--color-brand-1)"
+
+        buttonInputEvent.style.border = "1.5px solid var(--color-grey-3)"
+        buttonInputEvent.style.backgroundColor = "var(--fixed-white)"
+        buttonInputEvent.style.color = "var(--color-grey-2)"
+
+        buttonOutputEvent.style.border = "1.5px solid var(--color-grey-3)"
+        buttonOutputEvent.style.backgroundColor = "var(--fixed-white)"
+        buttonOutputEvent.style.color = "var(--color-grey-2)"
+    })
+    buttonInputEvent.addEventListener("click", () => {
+        const filteredInputCategoryId = insertedValues.filter(filterInput);
+        creatCards(filteredInputCategoryId)
+        buttonInputEvent.style.border = "1.5px solid var(--color-brand-1)"
+        buttonInputEvent.style.backgroundColor = "var(--color-brand-3)"
+        buttonInputEvent.style.color = "var(--color-brand-1)"
+
+        buttonAllEvent.style.border = "1.5px solid var(--color-grey-3)"
+        buttonAllEvent.style.backgroundColor = "var(--fixed-white)"
+        buttonAllEvent.style.color = "var(--color-grey-2)"
+
+        buttonOutputEvent.style.border = "1.5px solid var(--color-grey-3)"
+        buttonOutputEvent.style.backgroundColor = "var(--fixed-white)"
+        buttonOutputEvent.style.color = "var(--color-grey-2)"
+    })
+
+    buttonOutputEvent.addEventListener("click", () => {
+        const filteredOutputCategoryId = insertedValues.filter(filterOutput);
+        creatCards(filteredOutputCategoryId)
+        buttonOutputEvent.style.border = "1.5px solid var(--color-brand-1)"
+        buttonOutputEvent.style.backgroundColor = "var(--color-brand-3)"
+        buttonOutputEvent.style.color = "var(--color-brand-1)"
+
+        buttonAllEvent.style.border = "1.5px solid var(--color-grey-3)"
+        buttonAllEvent.style.backgroundColor = "var(--fixed-white)"
+        buttonAllEvent.style.color = "var(--color-grey-2)"
+
+        buttonInputEvent.style.border = "1.5px solid var(--color-grey-3)"
+        buttonInputEvent.style.backgroundColor = "var(--fixed-white)"
+        buttonInputEvent.style.color = "var(--color-grey-2)"
+    })
+}
+filterButtonsEvent()
+
+filterOutput
